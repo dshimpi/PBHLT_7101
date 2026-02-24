@@ -1,0 +1,248 @@
+{\rtf1\ansi\deff0 {\fonttbl{\f0\fnil Garamond;}}
+{\info {\author .}{\company .}{\title .}}
+\deflang1033\plain\fs20
+{\footer\pard\qc\plain\f0\fs20\chpgn\par}
+{
+{
+{\b\qc\line Descriptive Statistics }{\par}
+\trowd\trgaph108\trleft-108\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx2400\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx3200\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx4600\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx6000\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx7400\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx8800
+\ql { {Variable}}\cell
+\qr { {Obs}}\cell
+\qr { {Mean}}\cell
+\qr { {Std. Dev.}}\cell
+\qr { {Min}}\cell
+\qr { {Max}}\cell
+\row
+\trowd\trgaph108\trleft-108\cellx2400\cellx3200\cellx4600\cellx6000\cellx7400\cellx8800
+\ql { {subjectnumericrace}}\cell
+\qr {{6108}}\cell
+\qr {{17.425}}\cell
+\qr {{549.144}}\cell
+\qr {{1}}\cell
+\qr {{42351}}\cell
+\row
+\ql { {dodrace}}\cell
+\qr {{6107}}\cell
+\qr {{1.614}}\cell
+\qr {{.978}}\cell
+\qr {{1}}\cell
+\qr {{8}}\cell
+\row
+\ql { {age}}\cell
+\qr {{6108}}\cell
+\qr {{29.781}}\cell
+\qr {{8.681}}\cell
+\qr {{18}}\cell
+\qr {{58}}\cell
+\row
+\ql { {weightlbs}}\cell
+\qr {{6107}}\cell
+\qr {{174.82}}\cell
+\qr {{33.576}}\cell
+\qr {{86}}\cell
+\qr {{321}}\cell
+\row
+\ql { {heightin}}\cell
+\qr {{6108}}\cell
+\qr {{68.269}}\cell
+\qr {{3.869}}\cell
+\qr {{56}}\cell
+\qr {{94}}\cell
+\row
+\ql { {thumbtipreach}}\cell
+\qr {{6107}}\cell
+\qr {{78.985}}\cell
+\qr {{5.376}}\cell
+\qr {{60.2}}\cell
+\qr {{99.8}}\cell
+\row
+\ql { {span}}\cell
+\qr {{6107}}\cell
+\qr {{176.409}}\cell
+\qr {{11.084}}\cell
+\qr {{132.3}}\cell
+\qr {{212.1}}\cell
+\row
+\ql { {footlength}}\cell
+\qr {{6107}}\cell
+\qr {{26.307}}\cell
+\qr {{1.738}}\cell
+\qr {{19.8}}\cell
+\qr {{32.3}}\cell
+\row
+\ql { {kneeheightmidpatella}}\cell
+\qr {{6107}}\cell
+\qr {{47.551}}\cell
+\qr {{3.308}}\cell
+\qr {{34.6}}\cell
+\qr {{61.2}}\cell
+\row
+\ql { {waistheightomphalion}}\cell
+\qr {{6107}}\cell
+\qr {{103.156}}\cell
+\qr {{6.271}}\cell
+\qr {{80.5}}\cell
+\qr {{124.5}}\cell
+\row
+\ql { {functionalleglength}}\cell
+\qr {{6107}}\cell
+\qr {{110.213}}\cell
+\qr {{6.847}}\cell
+\qr {{83.5}}\cell
+\qr {{131.6}}\cell
+\row
+\ql { {cervicaleheight}}\cell
+\qr {{6107}}\cell
+\qr {{147.768}}\cell
+\qr {{8.429}}\cell
+\qr {{118.4}}\cell
+\qr {{173.8}}\cell
+\row
+\ql { {trochanterionheight}}\cell
+\qr {{6107}}\cell
+\qr {{88.277}}\cell
+\qr {{5.44}}\cell
+\qr {{66}}\cell
+\qr {{109.5}}\cell
+\row
+\ql { {stature}}\cell
+\qr {{6107}}\cell
+\qr {{171.46}}\cell
+\qr {{8.998}}\cell
+\qr {{140.9}}\cell
+\qr {{199.3}}\cell
+\row
+\ql { {waistcircumference}}\cell
+\qr {{6107}}\cell
+\qr {{91.466}}\cell
+\qr {{11.421}}\cell
+\qr {{61.1}}\cell
+\qr {{137.9}}\cell
+\row
+\ql { {chestcircumference}}\cell
+\qr {{6107}}\cell
+\qr {{102.225}}\cell
+\qr {{10.056}}\cell
+\qr {{69.5}}\cell
+\qr {{146.9}}\cell
+\row
+\ql { {bicristalbreadth}}\cell
+\qr {{6107}}\cell
+\qr {{27.472}}\cell
+\qr {{1.922}}\cell
+\qr {{19.7}}\cell
+\qr {{36.2}}\cell
+\row
+\ql { {hipbreadth}}\cell
+\qr {{6107}}\cell
+\qr {{34.838}}\cell
+\qr {{2.53}}\cell
+\qr {{26.4}}\cell
+\qr {{47.3}}\cell
+\row
+\ql { {hipbreadthsitting}}\cell
+\qr {{6107}}\cell
+\qr {{38.571}}\cell
+\qr {{3.239}}\cell
+\qr {{28}}\cell
+\qr {{54.1}}\cell
+\row
+\ql { {weightkg}}\cell
+\qr {{6068}}\cell
+\qr {{79.707}}\cell
+\qr {{15.654}}\cell
+\qr {{35.8}}\cell
+\qr {{144.2}}\cell
+\row
+\ql { {date}}\cell
+\qr {{6066}}\cell
+\qr {{18836.857}}\cell
+\qr {{170.097}}\cell
+\qr {{18539}}\cell
+\qr {{19088}}\cell
+\row
+\ql { {u id}}\cell
+\qr {{6108}}\cell
+\qr {{9180.016}}\cell
+\qr {{5305.812}}\cell
+\qr {{3}}\cell
+\qr {{21057}}\cell
+\row
+\ql { {is suspicious}}\cell
+\qr {{6108}}\cell
+\qr {{.01}}\cell
+\qr {{.102}}\cell
+\qr {{0}}\cell
+\qr {{1}}\cell
+\row
+\ql { {is adult}}\cell
+\qr {{6108}}\cell
+\qr {{1}}\cell
+\qr {{0}}\cell
+\qr {{1}}\cell
+\qr {{1}}\cell
+\row
+\ql { {is duplicate}}\cell
+\qr {{6108}}\cell
+\qr {{.151}}\cell
+\qr {{.358}}\cell
+\qr {{0}}\cell
+\qr {{1}}\cell
+\row
+\ql { {bmi}}\cell
+\qr {{6068}}\cell
+\qr {{26.969}}\cell
+\qr {{4.003}}\cell
+\qr {{15.352}}\cell
+\qr {{43.451}}\cell
+\row
+\ql { {bmi cat}}\cell
+\qr {{6068}}\cell
+\qr {{1.877}}\cell
+\qr {{.737}}\cell
+\qr {{0}}\cell
+\qr {{3}}\cell
+\row
+\ql { {month of testing}}\cell
+\qr {{6066}}\cell
+\qr {{5.916}}\cell
+\qr {{3.804}}\cell
+\qr {{1}}\cell
+\qr {{12}}\cell
+\row
+\ql { {season of testing}}\cell
+\qr {{6066}}\cell
+\qr {{2.293}}\cell
+\qr {{1.132}}\cell
+\qr {{1}}\cell
+\qr {{4}}\cell
+\row
+\ql { {gender num}}\cell
+\qr {{6108}}\cell
+\qr {{1.674}}\cell
+\qr {{.469}}\cell
+\qr {{1}}\cell
+\qr {{2}}\cell
+\row
+\ql { {writingpreference ~m}}\cell
+\qr {{6108}}\cell
+\qr {{2.871}}\cell
+\qr {{.364}}\cell
+\qr {{1}}\cell
+\qr {{3}}\cell
+\row
+\ql { {body category}}\cell
+\qr {{6108}}\cell
+\qr {{.316}}\cell
+\qr {{.667}}\cell
+\qr {{0}}\cell
+\qr {{2}}\cell
+\row
+}
+{\trowd\trgaph108\trleft-108
+\clbrdrt\brdrw15\brdrs\cellx8800{}\cell
+\row}
+
+
+\writepositionforappend
+}}
