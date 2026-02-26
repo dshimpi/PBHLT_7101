@@ -1,6 +1,6 @@
 ** Name: Darshan Shimpi
 ** Title: Project 1 Code
-** Date Last Modified: 2/17/2026
+** Date Last Modified: 2/26/2026
 *
 *
 *
@@ -330,22 +330,32 @@ label variable writingpreference_num "Numerical representation of the writing pr
 * Let's split the body types into Stout (1), Regular (0), and Lanky (2)
 * Percentiles were taken from https://dqydj.com/height-percentile-calculator-for-men-and-women/
 * Stout will be for individuals that have a BMI of overweight or obese and are below the 30th percentile for height by gender (171 cm for Men, 158cm for Women) and their legs (trochanterionheight) make up less than 51% of their stature
+* Small will be for individuals that have a BMI of regular or underweight and are below the 30th percentile for height by gender (171 cm for Men, 158cm for Women) and their legs
 * Lanky will be for individuals that have a BMI of regular or underweight and are above the 70th percentile (179 cm for Men, 166cm for Women) and their legs make up more than 51% of their stature
-* Regular will be for any other individual who doesn't meet these criteria 
+* Big will be for individuals that have a BMI of overweight or obese and are above the 70th percentile (179 cm for Men, 166cm for Women) AND their legs make up more than 51% of their stature. 
+* Average will be for any other individual who doesn't meet these criteria 
 
 
-* Set everyone to regular
+* Set everyone to average
 gen body_category = 0
 
+* Set small for the individuals meeting the criteria
+replace body_category = 1 if gender == "Male" & (bmi_cat == 0 | bmi_cat == 1) & stature < 171 & (trochanterionheight / stature < 0.51)
+replace body_category = 1 if gender == "Female" & (bmi_cat == 0 | bmi_cat == 1) & stature < 158  & (trochanterionheight / stature < 0.51)
+
 * Set stout for the individuals meeting the criteria
-replace body_category = 1 if gender == "Male" & (bmi_cat == 2 | bmi_cat == 3) & stature < 171 & (trochanterionheight / stature < 0.51)
-replace body_category = 1 if gender == "Female" & (bmi_cat == 2 | bmi_cat == 3) & stature < 158  & (trochanterionheight / stature < 0.51)
+replace body_category = 2 if gender == "Male" & (bmi_cat == 2 | bmi_cat == 3) & stature < 171 & (trochanterionheight / stature < 0.51)
+replace body_category = 2 if gender == "Female" & (bmi_cat == 2 | bmi_cat == 3) & stature < 158  & (trochanterionheight / stature < 0.51)
 
 * Set lanky for the individuals meeting the criteria
-replace body_category = 2 if gender == "Male" & (bmi_cat == 0 | bmi_cat == 1) & stature > 179 & (trochanterionheight / stature > 0.51)
-replace body_category = 2 if gender == "Female" & (bmi_cat == 0 | bmi_cat == 1) & stature < 166  & (trochanterionheight / stature > 0.51)
+replace body_category = 3 if gender == "Male" & (bmi_cat == 0 | bmi_cat == 1) & stature > 179 & (trochanterionheight / stature > 0.51)
+replace body_category = 3 if gender == "Female" & (bmi_cat == 0 | bmi_cat == 1) & stature < 166  & (trochanterionheight / stature > 0.51)
 
-label define body_category_labels 0 "Regular" 1 "Stout" 2 "Lanky"
+* Set big for the individuals meeting the criteria 
+replace body_category = 4 if gender == "Male" & (bmi_cat == 2 | bmi_cat == 3) & stature > 179 & (trochanterionheight / stature > 0.51)
+replace body_category = 3 if gender == "Female" & (bmi_cat == 2 | bmi_cat == 3) & stature < 166  & (trochanterionheight / stature > 0.51)
+
+label define body_category_labels 0 "Average" 1 "Small" 2 "Stout" 3 "Lanky" 4 "Big"
 label values body_category body_category_labels
 label variable body_category "Simple category for the body type of an individual based on BMI, Gender, Height Percentiles, and Hip to Height Ratio"
 

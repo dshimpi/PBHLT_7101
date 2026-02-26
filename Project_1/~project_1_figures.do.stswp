@@ -1,7 +1,18 @@
+** Name: Darshan Shimpi
+** Title: Project 1 Figure Code
+** Date Last Modified: 2/26/2026
+*
+*
+*
+*
+*
+**************************************************
+* Clear out existing data
+clear 
+* Navigate to our folder and load the dataset
 cd "C:\Users\darsh\OneDrive\Documents\PBHLT 7101\Project 1"
-use project_data_final
 
-ssc install asdoc
+use project_data_final
 
 * Get quick summary statistics on everything for the first table
 sum
@@ -43,7 +54,7 @@ thumbtipre~h |   0.7945   0.8250   0.7771   0.7815   0.8320   0.7873   1.0000
 
 *** We can see that waistheightomphalion and cervicaleheight have the highest correlation coefficient using the correlate command. We can then make a figure to show this too:
 
-heatplot waistheightomphalion cervicaleheight, xtitle("Neck Cervical Height (cm)") ytitle("Waist Height(cm)") title({bf:Figure 4.1}, position(11)) xlabel(,nogrid) ylabel(,nogrid) legend(size(small) bmargin(medium) region(margin(medium))) keylabels(, format(%4.0g))
+heatplot waistheightomphalion cervicaleheight, xtitle("Neck Cervical Height (cm)") ytitle("Waist Height (cm)") title({bf:Figure 4.1}, position(11)) xlabel(,nogrid) ylabel(,nogrid) legend(size(small) bmargin(medium) region(margin(medium))) keylabels(, format(%4.0g))
 
 ********************
 * Now let's check WITH stature and see if there are any differences by gender
@@ -81,3 +92,27 @@ thumbtipre~h |   0.6710   0.6853   0.6904   0.6935   0.6573   0.7338   0.6535   
 */
 
 * This is hard to look at BUT we only care about the stature correlations so we'll put only those into our table in a separate program to make it easier to compare the male and female results. 
+
+************************* 
+* Compare the self reported weight vs actual weight
+* First we'll have to convert our self-reported weight from lbs to kgs
+gen weight_lbs_to_kg = weightlbs / 2.205
+gen diff_self_actual_weight = weight_lbs_to_kg - weightkg
+
+violinplot diff_self_actual_weight , vertical fill ytitle("Difference Between Self-Reported and Actual Weight (kg)", margin(medium)) title({bf:Figure 4.2.1}, position(11))
+
+* And do a comparison by gender
+violinplot  diff_self_actual_weight, vertical fill split(gender) key(fill) legend(subtitle("Gender") position(3) cols(1)) ytitle("Difference Between Self-Reported and Actual Weight (kg)", margin(medium)) title({bf:Figure 4.2.2},position(11)) xlabel(,nogrid) ylabel(-50(25)75,nogrid)
+
+* Compare the self reported height vs actual height
+* First we'll have to convert our self-reported weight from lbs to kgs
+gen height_in_to_cm = heightin * 2.54
+gen diff_self_actual_height = height_in_to_cm - stature
+
+
+violinplot diff_self_actual_height, vertical fill ytitle("Difference Between Self-Reported and Actual Height (cm)", margin(medium)) title({bf:Figure 4.2.3}, position(11))
+
+********
+*  Compare the distributions of weight and BMI for each of the body types you created. Describe your findings in a paragraph with a figure and/or table. Focus on how well your body types describe differences in weight and obesity.
+
+heatplot weightkg bmi, by(body_category,title({bf:Figure 4.3}, position(11)) compact note("")) bins(12) xtitle("BMI", margin(small)) ytitle("Weight (kg)", margin(small)) xlabel(,nogrid) ylabel(,nogrid) levels(7)
